@@ -1,28 +1,73 @@
 @import "tailwindcss";
 
-body {
-  margin: 0;
-  color: #fff;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  background-image: linear-gradient(to bottom, #020917, #101725);
+@theme {
+  --color-bg-neutral: oklch(0.98 0.01 70);
+  --color-text-primary: oklch(0.25 0.02 70);
+  --color-accent-primary: oklch(0.45 0.08 30);
+  --color-secondary-tint: oklch(0.92 0.03 70);
+  --color-border-subtle: oklch(0.25 0.02 70 / 0.1);
+
+  --font-serif: "Baskervville", "Georgia", serif;
+  --font-sans: "Hanken Grotesk", "Inter", system-ui, sans-serif;
+
+  --spacing-section: clamp(4rem, 10vh, 8rem);
+
+  --animate-reveal: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.content {
-  display: flex;
-  min-height: 100vh;
-  line-height: 1.1;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.content h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
+@layer base {
+  body {
+    @apply bg-bg-neutral text-text-primary font-sans antialiased leading-relaxed m-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-normal leading-tight;
+  }
+
+  p {
+    @apply max-w-[65ch];
+  }
 }
 
-.content p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.5;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .serif {
+    font-family: var(--font-serif);
+  }
+
+  .italic {
+    font-style: italic;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-neutral);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-subtle);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-tint);
 }
