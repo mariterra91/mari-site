@@ -1,45 +1,65 @@
 export const Footer = () => {
   return (
-    <footer className="py-section bg-secondary-tint border-t border-border-subtle">
-      <div className="container mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-16 mb-16">
-          <div className="footer-cta">
-            <h2 className="text-[2.5rem] md:text-[4rem] mb-6 leading-tight serif italic">
-              Ready to support your family.
-            </h2>
-            <p className="text-[1.2rem] mb-10 opacity-80">
+    <footer className="py-20 md:py-32 border-t border-border-subtle bg-bg-neutral relative overflow-hidden">
+      <div className="container mx-auto px-6 md:px-8 relative z-10">
+        <div className="flex flex-col lg:flex-row justify-between gap-16 md:gap-32">
+          <div className="max-w-2xl">
+            <span className="block serif italic text-xl md:text-2xl text-accent-primary mb-6 md:mb-8">
+              A final note
+            </span>
+            <h2 className="text-3xl md:text-6xl text-text-primary leading-[1.2] md:leading-[1.1] mb-10 md:mb-12 font-serif italic">
               I look forward to helping your family by doing what I love most.
-              Let’s schedule a call to discuss your specific needs.
-            </p>
-            <a
-              href="mailto:contact@mari.com"
-              className="inline-block px-10 py-5 bg-accent-primary text-white font-serif text-lg rounded-[4px] transition-colors hover:bg-[oklch(0.4_0.08_30)]"
-            >
-              Get in Touch
-            </a>
+            </h2>
+            <div className="flex flex-wrap gap-10 md:gap-12">
+              <div>
+                <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] opacity-40 mb-3 md:mb-4">
+                  Direct contact
+                </p>
+                <a
+                  href="mailto:contact@mari.com"
+                  className="text-xl md:text-3xl font-serif italic text-accent-primary underline underline-offset-8 decoration-accent-primary/30 hover:decoration-accent-primary transition-all"
+                >
+                  contact@mari.com
+                </a>
+              </div>
+              <div>
+                <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] opacity-40 mb-3 md:mb-4">
+                  Location
+                </p>
+                <p className="text-xl md:text-3xl font-serif italic text-text-primary">
+                  Stockholm, Sweden
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-col justify-between">
-            <div className="mb-8">
-              <h4 className="font-sans font-semibold mb-4">
-                Service Agreement
+          <div className="flex flex-col justify-end">
+            <div className="max-w-xs p-6 md:p-8 border border-accent-primary/20 rounded-sm bg-secondary-tint/20">
+              <h4 className="font-serif italic text-lg md:text-xl mb-3 md:mb-4 text-accent-primary">
+                The Service Agreement
               </h4>
-              <p className="text-[0.9rem] opacity-60">
-                A formal service agreement will be drawn up and signed by both
-                parties before we begin, outlining hours, duties, and notice
+              <p className="text-sm opacity-60 leading-relaxed serif">
+                To ensure a clear and professional relationship, a formal
+                agreement will be signed outlining hours, duties, and notice
                 periods.
               </p>
             </div>
-            <div className="flex flex-col gap-2 text-[0.9rem] opacity-70 font-semibold">
-              <span>Mariane — Professional Private Nanny</span>
-              <span>Stockholm, Sweden</span>
-            </div>
           </div>
         </div>
-        <div className="pt-8 border-t border-border-subtle text-center text-[0.8rem] opacity-40">
-          <p>© 2026 Mariane. All rights reserved.</p>
+
+        <div className="mt-20 md:mt-32 pt-8 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-[10px] md:text-sm opacity-30 serif italic text-center md:text-left">
+            © 2026 Mariane. All rights reserved.
+          </p>
+          <div className="flex gap-6 md:gap-8 text-[10px] md:text-sm opacity-30 serif italic">
+            <span>Portfolio & CV</span>
+            <span>Professional Private Nanny</span>
+          </div>
         </div>
       </div>
+
+      {/* Subtle decorative wash */}
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/2 bg-accent-primary/5 blur-[120px] -z-0" />
     </footer>
   );
 };

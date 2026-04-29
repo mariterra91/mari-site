@@ -43,33 +43,51 @@ const specs = [
 
 export const Specializations = () => {
   return (
-    <Section id="specializations">
-      <div className="text-center mb-16">
-        <span className="block text-[1.2rem] text-accent-primary mb-2 serif italic">
-          Expertise & Care
-        </span>
-        <h2 className="text-5xl text-text-primary">My Specializations</h2>
+    <Section id="specializations" className="!max-w-7xl px-6 md:px-8">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 md:mb-24 gap-6 md:gap-8">
+        <div className="max-w-2xl">
+          <span className="block serif italic text-xl md:text-2xl text-accent-primary mb-3 md:mb-4">
+            A specialized approach
+          </span>
+          <h2 className="text-4xl md:text-6xl text-text-primary leading-[1.15] md:leading-[1.1]">
+            How I support your child’s <br className="hidden sm:block" />
+            <span className="italic serif">unique journey.</span>
+          </h2>
+        </div>
+        <p className="text-lg md:text-xl opacity-60 max-w-sm serif italic lg:text-right">
+          Every family is a world of its own. I adapt my expertise to fit your
+          rhythm and needs perfectly.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-16 md:gap-y-24">
         {specs.map((spec, index) => (
           <motion.div
             key={index}
-            className="p-12 bg-secondary-tint rounded-lg transition-all border border-border-subtle hover:translate-y-[-5px] hover:shadow-[0_10px_30px_oklch(0.25_0.02_70_/_0.05)]"
+            className={`flex gap-6 md:gap-8 items-start ${index % 2 !== 0 ? 'lg:pt-24' : ''}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 0.8, delay: (index % 2) * 0.2 }}
           >
-            <div className="w-12 h-12 bg-white text-accent-primary flex items-center justify-center rounded-full mb-8 shadow-[0_4px_10px_oklch(0.25_0.02_70_/_0.05)]">
-              <spec.icon size={24} strokeWidth={1.5} />
+            <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-secondary-tint text-accent-primary flex items-center justify-center rounded-full border border-border-subtle">
+              <spec.icon size={24} className="md:w-7 md:h-7" strokeWidth={1} />
             </div>
-            <h3 className="text-2xl mb-4">{spec.title}</h3>
-            <p className="text-[1rem] opacity-80 leading-relaxed">
-              {spec.description}
-            </p>
+            <div>
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4 font-serif italic text-accent-primary leading-tight">
+                {spec.title}
+              </h3>
+              <p className="text-base md:text-lg opacity-80 leading-relaxed max-w-md serif">
+                {spec.description}
+              </p>
+            </div>
           </motion.div>
         ))}
+      </div>
+
+      {/* Visual Break / Separator */}
+      <div className="mt-24 md:mt-48 flex justify-center">
+        <div className="w-px h-24 md:h-32 bg-gradient-to-b from-accent-primary/20 to-transparent" />
       </div>
     </Section>
   );

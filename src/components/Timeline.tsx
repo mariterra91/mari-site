@@ -5,81 +5,88 @@ const journey = [
   {
     period: '2015 – 2016',
     location: 'Iceland',
-    role: 'Au Pair',
+    role: 'A high-energy household',
     description:
-      'Caretaker for four children, including 22-month-old twins. Managed a high-energy household independently.',
+      'Caring for four children, including twins. We were often independent, exploring the Icelandic nature together. We remain close friends to this day.',
   },
   {
-    period: '2017 – 2017',
-    location: 'Stockholm, Sweden',
-    role: 'Au Pair',
+    period: '2017',
+    location: 'Stockholm',
+    role: 'Specialized infant care',
     description:
-      'Specialized care for a 4-month-old infant and 5-year-old twins.',
+      'Providing specialized care for a 4-month-old infant alongside 5-year-old twins. Focusing on early milestones and gentle routines.',
   },
   {
-    period: '2018 – 2018',
-    location: 'Åre, Sweden',
-    role: 'Au Pair',
+    period: '2018',
+    location: 'Åre',
+    role: 'High-support needs',
     description:
-      'Caring for a newborn and a 2-year-old with high-support needs (ADHD).',
+      'A loving but demanding environment, caring for a newborn and a toddler with ADHD. We fostered a relationship that continues to this day.',
   },
   {
     period: '2021 – 2022',
-    location: 'Stockholm, Sweden',
+    location: 'Nordic Light Nannies',
     role: 'Newborn & Night Specialist',
     description:
-      'Served as a Night Nanny for 6-week-old twins, transitioning to daycare and overnight shifts.',
-  },
-  {
-    period: '2023 – Present',
-    location: 'Stockholm, Sweden',
-    role: 'Motherhood & Swedish Language',
-    description:
-      "Dedicated focus on my daughter Anna's development and mastering the Swedish language.",
+      'Supporting families during those first critical weeks. Specialized night care for twins, helping parents find their rhythm.',
   },
 ];
 
 export const Timeline = () => {
   return (
-    <Section id="journey">
-      <div className="text-center mb-16">
-        <span className="block text-[1.2rem] text-accent-primary mb-2 serif italic">
-          My Professional Journey
+    <Section id="journey" className="!max-w-6xl px-6 md:px-8">
+      <div className="max-w-3xl mb-16 md:mb-32">
+        <span className="block serif italic text-xl md:text-2xl text-accent-primary mb-3 md:mb-4">
+          The path that led me here
         </span>
-        <h2 className="text-5xl text-text-primary">Two Decades of Care</h2>
+        <h2 className="text-4xl md:text-6xl text-text-primary leading-[1.15] md:leading-[1.1]">
+          Twenty years of stories, <br className="hidden sm:block" />
+          <span className="italic serif">not just jobs.</span>
+        </h2>
       </div>
 
-      <div className="relative max-w-[800px] mx-auto py-8">
-        {/* Vertical line */}
-        <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-border-subtle" />
-
+      <div className="space-y-16 md:space-y-32">
         {journey.map((item, index) => (
           <motion.div
             key={index}
-            className="relative pl-12 mb-12 last:mb-0"
-            initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className={`flex flex-col md:flex-row gap-6 md:gap-12 items-start ${index % 2 !== 0 ? 'md:flex-row-reverse text-left md:text-right' : ''}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: index * 0.1 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            {/* Dot */}
-            <div className="absolute left-[-4px] top-2 w-[9px] h-[9px] bg-accent-primary rounded-full shadow-[0_0_0_4px_var(--color-bg-neutral),0_0_0_5px_var(--color-border-subtle)]" />
-
-            <div className="timeline-content">
-              <span className="block text-[0.9rem] font-semibold text-accent-primary mb-1">
-                {item.period}
-              </span>
-              <h3 className="text-2xl mb-1">{item.role}</h3>
-              <span className="block text-[0.9rem] opacity-60 mb-4">
+            <div className="w-full md:w-1/3">
+              <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase opacity-40 block mb-1 md:mb-2">
                 {item.location}
               </span>
-              <p className="text-[1.1rem] opacity-80 max-w-[65ch]">
+              <span className="text-xl md:text-2xl font-serif italic text-accent-primary leading-none">
+                {item.period}
+              </span>
+            </div>
+            <div className="w-full md:w-2/3">
+              <h3 className="text-2xl md:text-4xl mb-4 md:mb-6 font-serif leading-tight">
+                {item.role}
+              </h3>
+              <p className="text-lg md:text-2xl opacity-80 leading-relaxed serif text-balance">
                 {item.description}
               </p>
             </div>
           </motion.div>
         ))}
       </div>
+
+      {/* Continuing the story note */}
+      <motion.div
+        className="mt-24 md:mt-48 p-8 md:p-12 bg-secondary-tint/50 border border-border-subtle rounded-sm text-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <p className="text-lg md:text-xl serif italic opacity-70">
+          ...and many more families in Brazil and Sweden who I’ve had the honor
+          to support as a household partner and nanny.
+        </p>
+      </motion.div>
     </Section>
   );
 };

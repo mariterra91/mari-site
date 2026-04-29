@@ -57,17 +57,23 @@
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Elegant & Integrated */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-bg-neutral);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border-subtle);
-  border-radius: 10px;
+  background: oklch(0.45 0.08 30 / 0.15);
+  border-radius: 100px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-secondary-tint);
+  background: oklch(0.45 0.08 30 / 0.3);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.45 0.08 30 / 0.15) transparent;
 }
