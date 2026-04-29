@@ -1,21 +1,21 @@
 import { motion } from 'framer-motion';
-import { Section } from './Section';
 import { Info } from 'lucide-react';
+import { Section } from './Section';
 
 export const Pricing = () => {
   return (
     <Section id="pricing" className="!max-w-5xl px-6 md:px-8">
-      <div className="text-center mb-16 md:mb-24">
+      <div className="text-center mb-12 md:mb-16">
         <span className="block serif italic text-xl md:text-2xl text-accent-primary mb-3 md:mb-4">
           Services & Investment
         </span>
-        <h2 className="text-4xl md:text-6xl text-text-primary leading-tight">
+        <h2 className="text-display-3 text-text-primary">
           A transparent partnership.
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-24">
-        <div className="p-8 md:p-12 border border-border-subtle relative bg-white/50 rounded-sm">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="p-8 md:p-12 border border-border-subtle relative bg-secondary-tint/20 rounded-sm">
           <h3 className="text-xl md:text-2xl mb-6 md:mb-8 font-serif italic text-accent-primary underline underline-offset-8">
             Casual & Occasional
           </h3>
@@ -48,7 +48,7 @@ export const Pricing = () => {
           </p>
         </div>
 
-        <div className="p-8 md:p-12 border border-accent-primary/30 relative bg-secondary-tint/30 rounded-sm">
+        <div className="p-8 md:p-12 border border-accent-primary/30 relative bg-secondary-tint/40 rounded-sm">
           <h3 className="text-xl md:text-2xl mb-6 md:mb-8 font-serif italic text-accent-primary underline underline-offset-8">
             Full Days & Support
           </h3>
@@ -98,7 +98,7 @@ export const Pricing = () => {
             About the Swedish RUT Deduction
           </span>
         </div>
-        <p className="text-xl md:text-2xl serif leading-relaxed opacity-90 mb-8 md:mb-12">
+        <p className="text-xl md:text-2xl serif leading-relaxed opacity-90 mb-6 md:mb-8">
           Through the RUT system, families in Sweden only pay{' '}
           <span className="text-accent-primary font-serif italic">
             50% of the labor cost

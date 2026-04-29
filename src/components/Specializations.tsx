@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
+import { Baby, Heart, LayoutGrid, Moon, Trees, Users } from 'lucide-react';
 import { Section } from './Section';
-import { Baby, Users, Moon, LayoutGrid, Heart, Trees } from 'lucide-react';
 
 const specs = [
   {
@@ -44,12 +44,12 @@ const specs = [
 export const Specializations = () => {
   return (
     <Section id="specializations" className="!max-w-7xl px-6 md:px-8">
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 md:mb-24 gap-6 md:gap-8">
+      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 md:mb-16 gap-6 md:gap-8">
         <div className="max-w-2xl">
           <span className="block serif italic text-xl md:text-2xl text-accent-primary mb-3 md:mb-4">
             A specialized approach
           </span>
-          <h2 className="text-4xl md:text-6xl text-text-primary leading-[1.15] md:leading-[1.1]">
+          <h2 className="text-display-3 text-text-primary">
             How I support your child’s <br className="hidden sm:block" />
             <span className="italic serif">unique journey.</span>
           </h2>
@@ -60,11 +60,11 @@ export const Specializations = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-16 md:gap-y-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-12 md:gap-y-16">
         {specs.map((spec, index) => (
           <motion.div
-            key={index}
-            className={`flex gap-6 md:gap-8 items-start ${index % 2 !== 0 ? 'lg:pt-24' : ''}`}
+            key={spec.title}
+            className={`flex gap-6 md:gap-8 items-start ${index % 2 !== 0 ? 'lg:pt-16' : ''}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -86,8 +86,8 @@ export const Specializations = () => {
       </div>
 
       {/* Visual Break / Separator */}
-      <div className="mt-24 md:mt-48 flex justify-center">
-        <div className="w-px h-24 md:h-32 bg-gradient-to-b from-accent-primary/20 to-transparent" />
+      <div className="mt-16 md:mt-24 flex justify-center">
+        <div className="w-px h-16 md:h-24 bg-gradient-to-b from-accent-primary/20 to-transparent" />
       </div>
     </Section>
   );

@@ -1,16 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-bg-neutral: oklch(0.98 0.01 70);
-  --color-text-primary: oklch(0.25 0.02 70);
-  --color-accent-primary: oklch(0.45 0.08 30);
-  --color-secondary-tint: oklch(0.92 0.03 70);
-  --color-border-subtle: oklch(0.25 0.02 70 / 0.1);
+  --color-bg-neutral: oklch(0.97 0.015 20);
+  --color-text-primary: oklch(0.25 0.04 20);
+  --color-accent-primary: oklch(0.5 0.12 25);
+  --color-secondary-tint: oklch(0.92 0.04 20);
+  --color-border-subtle: oklch(0.25 0.04 20 / 0.1);
 
-  --font-serif: "Baskervville", "Georgia", serif;
+  --font-serif: "Instrument Serif", "Baskervville", "Georgia", serif;
   --font-sans: "Hanken Grotesk", "Inter", system-ui, sans-serif;
 
-  --spacing-section: clamp(4rem, 10vh, 8rem);
+  --spacing-section: clamp(2.5rem, 6vh, 5rem);
 
   --animate-reveal: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -28,22 +29,49 @@
 
 @layer base {
   body {
-    @apply bg-bg-neutral text-text-primary font-sans antialiased leading-relaxed m-0;
+    @apply bg-bg-neutral text-text-primary font-sans antialiased leading-relaxed m-0 relative font-normal;
+  }
+
+  /* Paper Texture Overlay */
+  body::before {
+    content: "";
+    @apply fixed inset-0 pointer-events-none opacity-[0.03] z-[9999];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply font-serif font-normal leading-tight;
+    @apply font-serif font-medium leading-[1.2] tracking-normal;
   }
 
   p {
-    @apply max-w-[65ch];
+    @apply max-w-[65ch] text-base md:text-lg opacity-100 font-normal;
   }
 }
 
 @layer utilities {
+  .text-display-1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+  }
+
+  .text-display-2 {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    line-height: 1.1;
+    font-weight: 500;
+  }
+
+  .text-display-3 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
   .text-balance {
     text-wrap: balance;
   }

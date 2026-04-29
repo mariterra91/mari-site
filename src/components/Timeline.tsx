@@ -35,20 +35,20 @@ const journey = [
 export const Timeline = () => {
   return (
     <Section id="journey" className="!max-w-6xl px-6 md:px-8">
-      <div className="max-w-3xl mb-16 md:mb-32">
+      <div className="max-w-3xl mb-12 md:mb-20">
         <span className="block serif italic text-xl md:text-2xl text-accent-primary mb-3 md:mb-4">
           The path that led me here
         </span>
-        <h2 className="text-4xl md:text-6xl text-text-primary leading-[1.15] md:leading-[1.1]">
+        <h2 className="text-display-3 text-text-primary">
           Twenty years of stories, <br className="hidden sm:block" />
           <span className="italic serif">not just jobs.</span>
         </h2>
       </div>
 
-      <div className="space-y-16 md:space-y-32">
+      <div className="space-y-12 md:space-y-20">
         {journey.map((item, index) => (
           <motion.div
-            key={index}
+            key={`${item.period}-${item.location}`}
             className={`flex flex-col md:flex-row gap-6 md:gap-12 items-start ${index % 2 !== 0 ? 'md:flex-row-reverse text-left md:text-right' : ''}`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export const Timeline = () => {
 
       {/* Continuing the story note */}
       <motion.div
-        className="mt-24 md:mt-48 p-8 md:p-12 bg-secondary-tint/50 border border-border-subtle rounded-sm text-center"
+        className="mt-16 md:mt-24 p-8 md:p-12 bg-secondary-tint/30 border border-border-subtle rounded-sm text-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

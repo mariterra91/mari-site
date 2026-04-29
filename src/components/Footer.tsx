@@ -1,3 +1,5 @@
+import { InstagramIcon } from './icons/InstagramIcon';
+
 export const Footer = () => {
   return (
     <footer className="py-20 md:py-32 border-t border-border-subtle bg-bg-neutral relative overflow-hidden">
@@ -10,7 +12,7 @@ export const Footer = () => {
             <h2 className="text-3xl md:text-6xl text-text-primary leading-[1.2] md:leading-[1.1] mb-10 md:mb-12 font-serif italic">
               I look forward to helping your family by doing what I love most.
             </h2>
-            <div className="flex flex-wrap gap-10 md:gap-12">
+            <div className="flex flex-wrap gap-10 md:gap-16">
               <div>
                 <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] opacity-40 mb-3 md:mb-4">
                   Direct contact
@@ -20,6 +22,20 @@ export const Footer = () => {
                   className="text-xl md:text-3xl font-serif italic text-accent-primary underline underline-offset-8 decoration-accent-primary/30 hover:decoration-accent-primary transition-all"
                 >
                   contact@mari.com
+                </a>
+              </div>
+              <div>
+                <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] opacity-40 mb-3 md:mb-4">
+                  Social
+                </p>
+                <a
+                  href="https://instagram.com/marinanny26"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-xl md:text-3xl font-serif italic text-accent-primary underline underline-offset-8 decoration-accent-primary/30 hover:decoration-accent-primary transition-all"
+                >
+                  <InstagramIcon className="w-5 h-5 md:w-7 md:h-7" />
+                  Instagram
                 </a>
               </div>
               <div>

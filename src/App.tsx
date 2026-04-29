@@ -1,10 +1,10 @@
 import './App.css';
-import { Hero } from './components/Hero';
-import { Timeline } from './components/Timeline';
-import { MothersNote } from './components/MothersNote';
-import { Specializations } from './components/Specializations';
-import { Pricing } from './components/Pricing';
 import { Footer } from './components/Footer';
+import { Hero } from './components/Hero';
+import { MothersNote } from './components/MothersNote';
+import { Pricing } from './components/Pricing';
+import { Specializations } from './components/Specializations';
+import { Timeline } from './components/Timeline';
 
 const App = () => {
   return (

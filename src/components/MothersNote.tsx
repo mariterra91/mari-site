@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const MothersNote = () => {
   return (
-    <section className="py-20 md:py-48 overflow-hidden">
+    <section className="py-16 md:py-32 overflow-hidden">
       <div className="container mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
           <div className="md:col-span-7">
@@ -12,10 +12,10 @@ export const MothersNote = () => {
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              <span className="block serif italic text-xl md:text-2xl text-accent-primary mb-8 md:mb-12">
+              <span className="block serif italic text-xl md:text-2xl text-accent-primary mb-6 md:mb-8">
                 Dear Parents,
               </span>
-              <blockquote className="text-3xl md:text-5xl leading-[1.2] md:leading-[1.15] mb-8 md:mb-12 serif text-text-primary text-balance">
+              <blockquote className="text-display-2 mb-6 md:mb-8 serif text-text-primary/80 text-balance">
                 "Becoming a mother has been my greatest teacher. It gave me a
                 new depth of empathy and a sharper instinct for the silent needs
                 of a child."
