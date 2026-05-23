@@ -21,13 +21,13 @@ export const MothersNote = () => {
                 of a child."
               </blockquote>
               <div className="max-w-xl">
-                <p className="text-lg md:text-xl opacity-80 leading-relaxed mb-6 md:mb-8 serif">
+                <p className="text-lg md:text-xl text-text-primary/90 leading-relaxed mb-6 md:mb-8 serif">
                   Since the birth of my daughter Anna in 2023, my perspective on
                   childcare has shifted from purely professional to deeply
                   personal. I know exactly what it feels like to hand over your
                   world to someone else.
                 </p>
-                <p className="text-lg md:text-xl opacity-80 leading-relaxed serif">
+                <p className="text-lg md:text-xl text-text-primary/90 leading-relaxed serif">
                   That understanding is what I bring to your home. Not just
                   twenty years of specialist knowledge, but the heartbeat and
                   intuition of a mother who cares for yours as if they were her
@@ -47,6 +47,7 @@ export const MothersNote = () => {
               <img
                 src="/pics/mariane-anna.webp"
                 alt="Mariane holding her daughter Anna outdoors under willow trees"
+                loading="lazy"
                 className="w-full h-full object-cover sepia-[15%] contrast-[1.05]"
               />
               <div className="absolute inset-0 bg-accent-primary/5 mix-blend-overlay" />

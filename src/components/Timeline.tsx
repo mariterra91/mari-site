@@ -56,7 +56,7 @@ export const Timeline = () => {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="w-full md:w-1/3">
-              <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase opacity-40 block mb-1 md:mb-2">
+              <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-text-primary/65 block mb-1 md:mb-2">
                 {item.location}
               </span>
               <span className="text-xl md:text-2xl font-serif italic text-accent-primary leading-none">
@@ -67,7 +67,7 @@ export const Timeline = () => {
               <h3 className="text-2xl md:text-4xl mb-4 md:mb-6 font-serif leading-tight">
                 {item.role}
               </h3>
-              <p className="text-lg md:text-2xl opacity-80 leading-relaxed serif text-balance">
+              <p className="text-lg md:text-2xl text-text-primary/90 leading-relaxed serif text-balance">
                 {item.description}
               </p>
             </div>
@@ -82,7 +82,7 @@ export const Timeline = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <p className="text-lg md:text-xl serif italic opacity-70">
+        <p className="text-lg md:text-xl serif italic text-text-primary/85">
           ...and many more families in Brazil and Sweden who I’ve had the honor
           to support as a household partner and nanny.
         </p>

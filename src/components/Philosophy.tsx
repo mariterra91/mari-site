@@ -20,7 +20,7 @@ export const Philosophy = () => {
               Nurturing independence <br className="hidden sm:block" />
               <span className="italic serif">through curiosity.</span>
             </h2>
-            <div className="space-y-6 text-lg md:text-xl opacity-90 leading-relaxed serif text-balance">
+            <div className="space-y-6 text-lg md:text-xl text-text-primary/90 leading-relaxed serif text-balance">
               <p>
                 I believe in building lasting, trust-based relationships. My
                 goal is to make your home life smoother and your child’s world
@@ -56,11 +56,12 @@ export const Philosophy = () => {
               <img
                 src="/pics/montessori-art.webp"
                 alt="A child painting a rainbow with watercolors"
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div>
-              <span className="block text-[10px] md:text-xs uppercase tracking-[0.2em] opacity-40 mb-1">
+              <span className="block text-[10px] md:text-xs uppercase tracking-[0.2em] text-text-primary/65 mb-1">
                 Creativity
               </span>
               <p className="font-serif italic text-sm md:text-base text-accent-primary">
@@ -80,11 +81,12 @@ export const Philosophy = () => {
               <img
                 src="/pics/nature-childcare.webp"
                 alt="A young child lying on green grass surrounded by daisies"
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div>
-              <span className="block text-[10px] md:text-xs uppercase tracking-[0.2em] opacity-40 mb-1">
+              <span className="block text-[10px] md:text-xs uppercase tracking-[0.2em] text-text-primary/65 mb-1">
                 Nature
               </span>
               <p className="font-serif italic text-sm md:text-base text-accent-primary">

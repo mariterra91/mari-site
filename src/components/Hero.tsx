@@ -14,21 +14,21 @@ export const Hero = () => {
             <span className="block serif italic text-lg md:text-2xl text-accent-primary mb-4 md:mb-6">
               A personal portfolio by Mariane
             </span>
-            <h1 className="text-display-1 mb-8 text-text-primary text-balance">
-              Care that feels like <br className="hidden sm:block" />
-              <span className="italic serif text-accent-primary">home.</span>
+            <h1 className="text-display-1 mb-8 text-text-primary text-balance font-serif">
+              Quiet competence <br className="hidden sm:block" />
+              <span className="italic text-accent-primary">for your home.</span>
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-end">
               <div>
-                <p className="text-lg md:text-xl opacity-90 leading-relaxed mb-10 serif text-balance">
-                  Twenty years of professional expertise met with the intuition
-                  and warmth of a mother’s heart. I help families find peace of
-                  mind through nurturing, nature-led childcare.
+                <p className="text-lg md:text-xl leading-relaxed mb-10 serif text-balance text-text-primary/90">
+                  A unique blend of twenty years of professional nanny
+                  experience and the firsthand understanding of a mother.
+                  Supporting Stockholm families with dedicated, nature-led care.
                 </p>
                 <div className="flex flex-wrap items-center gap-8 md:gap-12">
                   <motion.a
                     href="mailto:contact@mari.com"
-                    className="inline-flex items-center gap-4 group"
+                    className="inline-flex items-center gap-4 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-4 rounded-sm"
                     whileHover={{ x: 10 }}
                   >
                     <span className="w-8 md:w-12 h-[1px] bg-accent-primary transition-all group-hover:w-16" />
@@ -40,7 +40,7 @@ export const Hero = () => {
                     href="https://instagram.com/marinanny26"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-accent-primary/60 hover:text-accent-primary transition-colors group"
+                    className="flex items-center gap-3 text-accent-primary/85 hover:text-accent-primary transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-4 rounded-sm"
                     whileHover={{ scale: 1.05 }}
                   >
                     <InstagramIcon size={20} />
@@ -51,7 +51,7 @@ export const Hero = () => {
                 </div>
               </div>
               <div className="hidden md:block">
-                <p className="text-sm uppercase tracking-[0.2em] opacity-40 mb-2">
+                <p className="text-sm uppercase tracking-[0.2em] text-text-primary/60 mb-2">
                   Based in
                 </p>
                 <p className="text-lg font-semibold tracking-wide">
@@ -73,6 +73,8 @@ export const Hero = () => {
         <img
           src="/pics/active-childcare.webp"
           alt="Mariane playing with children in a Stockholm park"
+          fetchPriority="high"
+          decoding="sync"
           className="w-full h-full object-cover blur-sm md:blur-none sepia-[20%] md:sepia-0"
         />
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-bg-neutral via-bg-neutral/80 md:via-bg-neutral/50 to-bg-neutral/40 md:to-transparent" />

@@ -14,32 +14,32 @@ export const Footer = () => {
             </h2>
             <div className="flex flex-wrap gap-10 md:gap-16">
               <div>
-                <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] opacity-40 mb-3 md:mb-4">
+                <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] text-text-primary/65 mb-3 md:mb-4">
                   Direct contact
                 </p>
                 <a
                   href="mailto:contact@mari.com"
-                  className="text-xl md:text-3xl font-serif italic text-accent-primary underline underline-offset-8 decoration-accent-primary/30 hover:decoration-accent-primary transition-all"
+                  className="text-xl md:text-3xl font-serif italic text-accent-primary underline underline-offset-8 decoration-accent-primary/30 hover:decoration-accent-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary rounded-sm"
                 >
                   contact@mari.com
                 </a>
               </div>
               <div>
-                <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] opacity-40 mb-3 md:mb-4">
+                <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] text-text-primary/65 mb-3 md:mb-4">
                   Social
                 </p>
                 <a
                   href="https://instagram.com/marinanny26"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-xl md:text-3xl font-serif italic text-accent-primary underline underline-offset-8 decoration-accent-primary/30 hover:decoration-accent-primary transition-all"
+                  className="flex items-center gap-3 text-xl md:text-3xl font-serif italic text-accent-primary underline underline-offset-8 decoration-accent-primary/30 hover:decoration-accent-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary rounded-sm"
                 >
                   <InstagramIcon className="w-5 h-5 md:w-7 md:h-7" />
                   Instagram
                 </a>
               </div>
               <div>
-                <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] opacity-40 mb-3 md:mb-4">
+                <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] text-text-primary/65 mb-3 md:mb-4">
                   Location
                 </p>
                 <p className="text-xl md:text-3xl font-serif italic text-text-primary">
@@ -51,10 +51,10 @@ export const Footer = () => {
 
           <div className="flex flex-col justify-end">
             <div className="max-w-xs p-6 md:p-8 border border-accent-primary/20 rounded-sm bg-secondary-tint/20">
-              <h4 className="font-serif italic text-lg md:text-xl mb-3 md:mb-4 text-accent-primary">
+              <h3 className="font-serif italic text-lg md:text-xl mb-3 md:mb-4 text-accent-primary">
                 The Service Agreement
-              </h4>
-              <p className="text-sm opacity-60 leading-relaxed serif">
+              </h3>
+              <p className="text-sm text-text-primary/85 leading-relaxed serif">
                 To ensure a clear and professional relationship, a formal
                 agreement will be signed outlining hours, duties, and notice
                 periods.
@@ -64,10 +64,10 @@ export const Footer = () => {
         </div>
 
         <div className="mt-20 md:mt-32 pt-8 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] md:text-sm opacity-30 serif italic text-center md:text-left">
+          <p className="text-[10px] md:text-sm text-text-primary/80 serif italic text-center md:text-left">
             © 2026 Mariane. All rights reserved.
           </p>
-          <div className="flex gap-6 md:gap-8 text-[10px] md:text-sm opacity-30 serif italic">
+          <div className="flex gap-6 md:gap-8 text-[10px] md:text-sm text-text-primary/80 serif italic">
             <span>Portfolio & CV</span>
             <span>Professional Private Nanny</span>
           </div>
