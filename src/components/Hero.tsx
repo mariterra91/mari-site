@@ -27,7 +27,7 @@ export const Hero = () => {
                 </p>
                 <div className="flex flex-wrap items-center gap-8 md:gap-12">
                   <motion.a
-                    href="mailto:contact@mari.com"
+                    href="mailto:contact@marinanny.com"
                     className="inline-flex items-center gap-4 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-4 rounded-sm"
                     whileHover={{ x: 10 }}
                   >

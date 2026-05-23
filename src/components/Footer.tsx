@@ -18,10 +18,10 @@ export const Footer = () => {
                   Direct contact
                 </p>
                 <a
-                  href="mailto:contact@mari.com"
+                  href="mailto:contact@marinanny.com"
                   className="text-xl md:text-3xl font-serif italic text-accent-primary underline underline-offset-8 decoration-accent-primary/30 hover:decoration-accent-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary rounded-sm"
                 >
-                  contact@mari.com
+                  contact@marinanny.com
                 </a>
               </div>
               <div>
