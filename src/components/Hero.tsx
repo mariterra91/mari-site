@@ -28,10 +28,9 @@ export const Hero = () => {
                 <div className="flex flex-wrap items-center gap-8 md:gap-12">
                   <motion.a
                     href="mailto:contact@marinanny.com"
-                    className="inline-flex items-center gap-4 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-4 rounded-sm"
-                    whileHover={{ x: 10 }}
+                    className="inline-flex items-center relative pl-12 md:pl-16 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary focus-visible:ring-offset-4 rounded-sm"
                   >
-                    <span className="w-8 md:w-12 h-[1px] bg-accent-primary transition-all group-hover:w-16" />
+                    <span className="absolute left-0 w-8 md:w-12 h-[1px] bg-accent-primary transition-all group-hover:w-12 md:group-hover:w-16" />
                     <span className="font-serif text-lg md:text-xl italic text-accent-primary underline underline-offset-8">
                       Start a conversation
                     </span>

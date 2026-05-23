@@ -68,7 +68,6 @@ export const Footer = () => {
             © 2026 Mariane. All rights reserved.
           </p>
           <div className="flex gap-6 md:gap-8 text-[10px] md:text-sm text-text-primary/80 serif italic">
-            <span>Portfolio & CV</span>
             <span>Professional Private Nanny</span>
           </div>
         </div>
