@@ -71,8 +71,8 @@ export const Hero = () => {
         className="absolute top-0 right-0 w-full md:w-1/2 h-full z-0 opacity-15 md:opacity-40 pointer-events-none"
       >
         <img
-          src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=80"
-          alt="Sunlit nursery"
+          src="/pics/active-childcare.webp"
+          alt="Mariane playing with children in a Stockholm park"
           className="w-full h-full object-cover blur-sm md:blur-none sepia-[20%] md:sepia-0"
         />
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-bg-neutral via-bg-neutral/80 md:via-bg-neutral/50 to-bg-neutral/40 md:to-transparent" />

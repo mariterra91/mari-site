@@ -45,8 +45,8 @@ export const MothersNote = () => {
               className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-xl ring-4 md:ring-8 ring-white"
             >
               <img
-                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80"
-                alt="Mariane and Anna"
+                src="/pics/mariane-anna.webp"
+                alt="Mariane holding her daughter Anna outdoors under willow trees"
                 className="w-full h-full object-cover sepia-[15%] contrast-[1.05]"
               />
               <div className="absolute inset-0 bg-accent-primary/5 mix-blend-overlay" />
